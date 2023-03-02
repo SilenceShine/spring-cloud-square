@@ -18,7 +18,7 @@
 
     <properties>
         <revision>0.4.1</revision>
-        <spring-cloud-commons.version>3.1.7-SNAPSHOT</spring-cloud-commons.version>
+        <spring-cloud-commons.version>4.0.1</spring-cloud-commons.version>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -31,8 +31,8 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-commons-dependencies</artifactId>
                 <version>${spring-cloud-commons.version}</version>
-                <type>pom</type>
                 <scope>import</scope>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>io.github.SilenceShine</groupId>
@@ -44,6 +44,11 @@
                 <artifactId>spring-cloud-square-httpinterface-webclient</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.SilenceShine</groupId>
+                <artifactId>spring-cloud-square-httpinterface-webclient-resilience4j</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -52,6 +57,7 @@
         <module>spring-cloud-square-example</module>
         <module>spring-cloud-square-httpinterface</module>
         <module>spring-cloud-square-httpinterface-webclient</module>
+        <module>spring-cloud-square-httpinterface-webclient-resilience4j</module>
     </modules>
 
     <profiles>
